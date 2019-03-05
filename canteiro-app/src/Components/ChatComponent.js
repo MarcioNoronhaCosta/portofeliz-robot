@@ -1,50 +1,65 @@
 import React from 'react';
-import { GiftedChat } from 'react-web-gifted-chat';
+import { ChatFeed } from 'react-bell-chat'
+ 
+// Your code stuff...
  
 class ChatComponent extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            messages: [
+              {
+                id: 1,
+                authorId: 1,
+                message: "Sample message",
+                createdOn: new Date(),
+                isSend: true
+              },
+              {
+                id: 2,
+                authorId: 2,
+                message: "Second sample message",
+                createdOn: new Date(),
+                isSend: false
+              },
+            ],
+            authors: [
+              {
+                id: 1,
+                name: 'Mark',
+                isTyping: true,
+                lastSeenMessageId: 1,
+                bgImageUrl: undefined
+              },
+              {
+                id: 2,
+                name: 'Peter',
+                isTyping: false,
+                lastSeenMessageId: 2,
+                bgImageUrl: undefined
+              }
+            ]
+          };
+    }
+
+    render() {
  
-  state = {
-    messages: [],
-  };
- 
-  componentWillMount() {
-    this.setState({
-      messages: [
-        {
-          id: 1,
-          text: 'Hello developer',
-          createdAt: new Date(),
-          user: {
-            id: 2,
-            name: 'React',
-            avatar: 'https://facebook.github.io/react/img/logo_og.png',
-          },
-        },
-      ],
-    });
-  }
- 
-  onSend(messages = []) {
-    this.setState((previousState) => ({
-      messages: GiftedChat.append(previousState.messages, messages),
-    }));
-  }
- 
-  render() {
-    return (
-      <div>
-      <GiftedChat
-        messages={this.state.messages}
-        onSend={(messages) => this.onSend(messages)}
-        user={{
-          id: 1,
-        }}
-      />
-      <h1>Alguma coisa</h1>
-      </div>
-    );
-  }
- 
+        return (
+       
+          // Your JSX...
+       
+          <ChatFeed
+            messages={this.state.messages} // Array: list of message objects
+            authors={this.state.authors} // Array: list of authors
+            yourAuthorId={2} // Number: Your author id (corresponds with id from list of authors)
+          />
+       
+          // Your JSX...
+       
+        )
+       
+      }
 }
 
 export default ChatComponent;
+

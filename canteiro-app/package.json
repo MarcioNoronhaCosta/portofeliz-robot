@@ -5,6 +5,7 @@
   "dependencies": {
     "moment": "^2.24.0",
     "react": "^16.8.3",
+    "react-bell-chat": "^1.0.10",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
     "react-web-gifted-chat": "^0.6.3"
