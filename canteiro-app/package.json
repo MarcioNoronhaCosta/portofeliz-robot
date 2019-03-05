@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "rc-chat-view": "^1.0.2",
+    "moment": "^2.24.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-web-gifted-chat": "^0.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
