@@ -12,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#mic-button{
+  height:5vh;
+  display:block;
+  height: 50px;
+  width: 50px;
+
+}
+.rcw-conversation-container > .rcw-header {
+  background-color: pink
+
+}
+#mic-button:active {
+ 
+  color:red;
+  
+  transform: translateY(4px);
+}
+
+.ChatWrapper{
+  height:80vh;
+  width:100%
+}
+.sound-wave{
+  width:100%
+}
