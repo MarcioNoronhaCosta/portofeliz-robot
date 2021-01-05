@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "audio-recorders": "^1.1.9",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "firebase": "^5.8.5",
     "moment": "^2.24.0",
     "react": "^16.8.3",
